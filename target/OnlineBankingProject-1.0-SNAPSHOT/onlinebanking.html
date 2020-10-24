@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Online Banking - Customers</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="APIendpoints.js"></script>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="stylesheet.css" rel="stylesheet">
+    </head>
+
+    <body>
+        
+        <!--https://unsplash.com/photos/ZVprbBmT8QA Banner-->
+        <nav id="navbar" class="navbar sticky-top navbar-light">
+            <h1>NCI Online Bank</h1>
+
+            <!--Customer Login, form submission-->
+            <div class="nav justify-content-end">
+                <div class="form-group mr-2">
+                    <input type='text' id='customerID' name='customerID' placeholder = 'Customer ID' class="form-control">
+                </div>
+                <div class="form-group mr-2">
+                    <input type='password' id='password' name='password' placeholder = 'Password' class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type='button' onclick='showCustomer()' value="Login" class="btn btn-primary"/>
+                    <input type='button' onclick='logout()' value="Logout" class="btn btn-secondary"/>
+                </div>
+            </div>
+        </nav>
+
+        <div class="view">
+            <div id="main-card" class="card">
+            
+                <!--Customer section where information from the Ajax queries will be displayed-->
+                <div class="resp-customer"></div>
+
+                <!--Account section where information from the Ajax queries will be displayed-->
+                <div class="createaccount"></div>
+
+                <div class="resp-showaccounts row row-cols-4 justify-content-center"></div>
+                
+                <div class="resp-balance"></div>
+                <div class="resp-singleaccount"></div>
+                
+                <!--Transactions section where information from the Ajax queries will be displayed-->
+                
+                <div class="transactions p-3 tab-pane active"></div>
+                <div class="transactiontable px-3"></div>
+
+                <div class="resp-showtransactions"></div>
+                <div class="resp-single-transaction"></div>
+
+                <div class="createtransaction"></div>     
+            </div>
+        </div>
+    </body>
+</html>
